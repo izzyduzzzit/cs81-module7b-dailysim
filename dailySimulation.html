@@ -9,34 +9,44 @@
 <body style="font-family: sans-serif; text-align: center; padding-top: 60px; background-color: #eef;">
 
   <h1>My Simulated Day</h1>
+  <!-- This is the output div where we will be inserting our simulated activities -->
   <div id="output" style="margin-top: 40px; font-size: 1.5rem;"></div>
 
   <script>
+    // Initialize the output div reference and store it in a variable
     const output = document.getElementById("output");
 
+    // showActivity function to simulate an activity with a delay
     function showActivity(text, delay) {
-        setTimeout(() => {
-            const p = document.createElement("p");
-            p.textContent = text;
-            output.appendChild(p);
-        }, delay);
+      // Use setTimeout to simulate the delay
+      setTimeout(() => {
+        // Create a new paragraph element for each activity sent to the showActivity function
+        const p = document.createElement("p");
+        // Set the content to the activity sent to the showActivity function as "text" parameter
+        p.textContent = text;
+        // Append the html paragraph, or "p" element with activity content, to the output div
+        output.appendChild(p);
+      }, delay); // Delay in milliseconds before executing the function received from each showActivity call
     }
 
-    showActivity("🛌✨ Woke up and got out of bed", 2000); // 2 seconds later
-    showActivity("🧘‍♀️🧎‍♂️ Did yoga stretching routine", 4000); // 4 second later
-    showActivity("🚿👗 Took a shower and got dressed", 6000); // 6 seconds later
-    showActivity("💻🔐 Logged into work", 8000); // 8 seconds later
+    // Simulate the daily activities with increasing delays
+    showActivity("🛌✨ Woke up and got out of bed", 2000); // 2 seconds delay
+    showActivity("🧘‍♀️🧎‍♂️ Did morning yoga & stretching routine", 4000); // 4 second delay
+    showActivity("🚿👗 Took a shower and got dressed", 6000); // 6 seconds delay
+    showActivity("💻🔐 Logged into work", 8000); // 8 seconds delay
 
-    // Surprise twist: random mood emoji at lunch
+    // Surprise twist: random moods for the daily lunch break
     const moods = ["😐", "😄", "😩", "🥴", "🤓"];
+    // RandomMood variable to select a random mood from the moods array using Math.random() and Math.floor()
     const randomMood = moods[Math.floor(Math.random() * moods.length)];
-    showActivity(`🍜 Lunch break ${randomMood}`, 10000); // 10 seconds later
+    showActivity(`🍜 Lunch break ${randomMood}`, 10000); // 10 seconds delay
 
-    showActivity("🎤🗣️ Practiced my voice training", 12000); // 12 seconds later
-    showActivity("🚶‍♀️🌿 Went for a walk break", 14000); // 14 seconds later
-    showActivity("📝⏱️ Updated timesheets", 16000); // 16 seconds later
-    showActivity("✅🧠 Finished work", 18000); // 18 seconds later
-    showActivity("🎸🎶 Practiced guitar", 20000); // 20 seconds later
+    // Continue with simulating afternoon activities
+    showActivity("🎤🗣️ Practiced trans voice training", 12000); // 12 seconds delay
+    showActivity("🚶‍♀️🌿 Took afternoon walk break", 14000); // 14 seconds delay
+    showActivity("📝⏱️ Timesheets updated", 16000); // 16 seconds delay
+    showActivity("✅🧠 Logged out of work", 18000); // 18 seconds delay
+    showActivity("🎸🎶 Did daily guitar practice", 20000); // 20 seconds delay
 
   </script>
 
