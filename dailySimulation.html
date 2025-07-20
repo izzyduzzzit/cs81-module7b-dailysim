@@ -22,15 +22,21 @@
         }, delay);
     }
 
-    showActivity("Woke up and got out of bed", 2000); // 2 seconds later
-    showActivity("Brushed my teeth", 4000); // 4 second later
-    showActivity("Took a shower", 6000); // 6 seconds later
-    showActivity("Got dressed", 8000); // 8 seconds later
-    showActivity("Had breakfast", 10000); // 10 seconds later
-    showActivity("Went to work/school", 12000); // 12 seconds later
-    showActivity("Had lunch", 14000); // 14 seconds later
-    showActivity("Finished work/school", 16000); // 16 seconds later
-    showActivity("Exercised", 18000); // 18 seconds later
+    showActivity("🛌✨ Woke up and got out of bed", 2000); // 2 seconds later
+    showActivity("🧘‍♀️🧎‍♂️ Did yoga stretching routine", 4000); // 4 second later
+    showActivity("🚿👗 Took a shower and got dressed", 6000); // 6 seconds later
+    showActivity("💻🔐 Logged into work", 8000); // 8 seconds later
+
+    // Surprise twist: random mood emoji at lunch
+    const moods = ["😐", "😄", "😩", "🥴", "🤓"];
+    const randomMood = moods[Math.floor(Math.random() * moods.length)];
+    showActivity(`🍜 Lunch break ${randomMood}`, 10000); // 10 seconds later
+
+    showActivity("🎤🗣️ Practiced my voice training", 12000); // 12 seconds later
+    showActivity("🚶‍♀️🌿 Went for a walk break", 14000); // 14 seconds later
+    showActivity("📝⏱️ Updated timesheets", 16000); // 16 seconds later
+    showActivity("✅🧠 Finished work", 18000); // 18 seconds later
+    showActivity("🎸🎶 Practiced guitar", 20000); // 20 seconds later
 
   </script>
 
