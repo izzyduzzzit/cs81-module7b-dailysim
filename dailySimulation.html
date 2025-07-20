@@ -14,6 +14,24 @@
   <script>
     const output = document.getElementById("output");
 
+    function showActivity(text, delay) {
+        setTimeout(() => {
+            const p = document.createElement("p");
+            p.textContent = text;
+            output.appendChild(p);
+        }, delay);
+    }
+
+    showActivity("Woke up and got out of bed", 2000); // 2 seconds later
+    showActivity("Brushed my teeth", 4000); // 4 second later
+    showActivity("Took a shower", 6000); // 6 seconds later
+    showActivity("Got dressed", 8000); // 8 seconds later
+    showActivity("Had breakfast", 10000); // 10 seconds later
+    showActivity("Went to work/school", 12000); // 12 seconds later
+    showActivity("Had lunch", 14000); // 14 seconds later
+    showActivity("Finished work/school", 16000); // 16 seconds later
+    showActivity("Exercised", 18000); // 18 seconds later
+
   </script>
 
 </body>
